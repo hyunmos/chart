@@ -1,0 +1,18 @@
+{
+  "name": "chart",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/hyunmos/chart.git",
+  "author": "HyunMo Ahn <gusahdks@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel ./index.html --port 3000 --open"
+  },
+  "devDependencies": {
+    "parcel": "^1.12.4"
+  },
+  "dependencies": {
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  }
+}
