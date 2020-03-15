@@ -6,9 +6,16 @@
   "author": "HyunMo Ahn <gusahdks@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "parcel ./index.html --port 3000 --open"
+    "start": "parcel ./index.html --port 3000 --open",
+    "storybook": "start-storybook"
+  },
+  "alias": {
+    "@": "./src"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@storybook/react": "^5.3.17",
+    "babel-loader": "^8.0.6",
     "parcel": "^1.12.4"
   },
   "dependencies": {
