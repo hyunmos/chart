@@ -1,11 +1,26 @@
 import React, { useEffect } from 'react';
 import Chart from 'chart.js';
+import { CHART_TYPE } from '../../constants/type'
+
+/**
+ * Line Graph about get point per month.
+ * - Show 4th month x-axios (Jan/Apr/Aug/Dec)
+ * - Add vertical line on current month.
+ * - Add Tooltip on current month and show get point.
+ */
+
+const samplePlugin = {
+  afterDatasetsDraw: (chart, b, c) => {
+    console.log(chart, b, c)
+  },
+};
+
 
 function ChartComponent() {
   useEffect(() => {
     const canvas = document.getElementById('chart');
     new Chart(canvas, {
-      type: 'bar',
+      type: CHART_TYPE.LINE,
       data: {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
@@ -38,7 +53,8 @@ function ChartComponent() {
             }
           }]
         }
-      }
+      },
+      plugins: [samplePlugin],
     });
   }, []);
 
