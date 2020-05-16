@@ -7,7 +7,10 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel ./index.html --port 3000 --open",
-    "storybook": "start-storybook"
+    "story": "start-storybook",
+    "story:build": "build-storybook -o dist/story",
+    "deploy": "yarn story:build && firebase deploy",
+    "deploy:test": "yarn story:build && firebase serve --host 0.0.0.0"
   },
   "alias": {
     "@": "./src"
